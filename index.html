@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Calculator Program</title>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white rounded-xl shadow-lg p-6 w-80">
+        <div id="display" class="mb-4 h-16 bg-gray-100 text-right text-2xl p-4 rounded font-mono">0</div>
+        <div class="grid grid-cols-4 gap-3">
+            <!-- Row 1 -->
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">7</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">8</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">9</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">/</button>
+
+            <!-- Row 2 -->
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">4</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">5</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">6</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">*</button>
+
+            <!-- Row 3 -->
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">1</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">2</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">3</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">-</button>
+
+            <!-- Row 4 -->
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">0</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">.</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">=</button>
+            <button class="btn bg-gray-300 hover:bg-gray-400 text-xl font-semibold py-2 rounded w-full">+</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

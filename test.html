@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Calculator Program</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-200">
+    <div class="bg-white rounded-xl shadow-xl p-6 w-64">
+        <div id="display" class="mb-4 h-12 bg-gray-100 text-right text-2xl p-2 rounded">0</div>
+        <div class="grid grid-cols-4 gap-2">
+         <button class="bg-blue-500 text-white p-3 rounded" onclick="clearDisplay()">C</button>
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('7')">7</button>
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('8')">8</button>
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('9')">9</button>
+            <button class="bg-yellow-500 text-white p-3 rounded" onclick="appendToDisplay('/')">/</button>
+
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('4')">4</button>
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('5')">5</button>
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('6')">6</button>
+            <button class="bg-yellow-500 text-white p-3 rounded" onclick="appendToDisplay('*')">*</button>
+
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('1')">1</button>
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('2')">2</button>
+            <button class="bg-gray-300 p-3 rounded" onclick="appendToDisplay('3')">3</button>
+            <button class="bg-yellow-500 text-white p-3 rounded" onclick="appendToDisplay('-')">-</button>
+
+            <button class="bg-gray-300 p-3 rounded col-span-2" onclick="appendToDisplay('0')">0</button>
+            <button class="bg-yellow-500 text-white p-3 rounded" onclick="calculateResult()">=</button>
+            <button class="bg-yellow-500 text-white p-3 rounded" onclick="appendToDisplay('+')">+</button>
+        </div>
+        <script>
+            function appendToDisplay(value) {
+                const display = document.getElementById('display');
+                if (display.innerText === '0' && value !== '.') {
+                    display.innerText = value;
+                } else {
+                    display.innerText += value;
+                }
+            }
+
+            function clearDisplay() {
+                document.getElementById('display').innerText = '0';
+            }
+
+            function calculateResult() {
+                const display = document.getElementById('display');
+                try {
+                    display.innerText = eval(display.innerText);
+                } catch (error) {
+                    display.innerText = 'Error';
+                }
+            }
+        </script>    
+    </div>
+</body>
+</html>

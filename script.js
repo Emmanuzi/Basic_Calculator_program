@@ -13,6 +13,11 @@ buttons.forEach(button => {
         current = "Error";
       }
     } else {
+      // If the display is "0" or "Error", reset it
+      if (display.textContent === "0" || display.textContent === "Error") {
+        display.textContent = "";
+        current = "";
+      }
       current += value;
     }
 
@@ -21,6 +26,11 @@ buttons.forEach(button => {
 });
 // Clear the display when the page loads
 window.onload = () => {
-  display.textContent = "";
+  display.textContent = "0";
   current = "";
 };
+// Add a clear button functionality
+function clearDisplay() {
+  display.textContent = "0";
+  current = "";
+}
